@@ -1,0 +1,28 @@
+{
+  "name": "b-3dev/wiki-client",
+  "description": "Request to wiki-api.ir APIs",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "b-3dev",
+      "email": "b3dev.mmd@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Api\\": "src/"
+    }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/b-3dev/wiki-client"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
