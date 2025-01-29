@@ -1,24 +1,24 @@
 # wikiAPI
 
-`wikiAPI` یک کتابخانه ساده PHP برای ارتباط با API‌های [wiki-api](https://wiki-api.ir) است. این پکیج از `Guzzle` برای ارسال درخواست‌های HTTP استفاده می‌کند و امکان ارسال درخواست‌های GET به URL‌های مختلف 
+`wikiAPI` is a simple PHP library for interacting with the [wiki-api](https://wiki-api.ir) APIs. This package uses `Guzzle` to send HTTP requests and allows making GET requests to various URLs.
 
-## پیش‌نیازها
+## Prerequisites
 
-برای استفاده از این پکیج، باید **PHP 7.4.3 یا بالاتر** نصب شده باشد.
+To use this package, you need to have **PHP 7.4.3 or higher** installed.
 
-## نصب
+## Installation
 
-برای نصب این پکیج از Composer، ابتدا آن را به عنوان وابستگی به پروژه خود اضافه کنید.
+To install this package via Composer, simply add it as a dependency to your project.
 
-### از Packagist نصب کنید
+### Install via Packagist
 
 ```bash
 composer require b-3dev/wiki-client
 ```
 
-## استفاده
+## Usage
 
-بعد از نصب پکیج، می‌توانید آن را در پروژه خود به صورت زیر استفاده کنید:
+Once the package is installed, you can use it in your project as follows:
 
 ```php
 <?php
@@ -26,14 +26,14 @@ require 'vendor/autoload.php';
 
 use Api\wikiAPI;
 $wiki = new wikiAPI();
-$response = $wiki->request('apis-1/ChatGPT', ['q' => 'سلام']);
+$response = $wiki->request('apis-1/ChatGPT', ['q' => 'Hello']);
 
 print_r($response);
 /*
 Array
 (
     [status_code] => 200
-    [body] => {"status":true,"channel":"@Wiki_API","site":"Wiki-Api.ir","developers":"@B3dev, @Dumacel","results":"سلام! چطور می‌توانم به شما کمک کنم؟ 😊"}
+    [body] => {"status":true,"channel":"@Wiki_API","site":"Wiki-Api.ir","developers":"@B3dev, @Dumacel","results":"Hello! How can I assist you today? 😊"}
 )
 */
 ```
