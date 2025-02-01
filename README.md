@@ -13,7 +13,7 @@ To install this package via Composer, simply add it as a dependency to your proj
 ### Install via Packagist
 
 ```bash
-composer require b-3dev/wiki-client
+composer require b-3dev/php-wiki-client
 ```
 
 ## Usage
